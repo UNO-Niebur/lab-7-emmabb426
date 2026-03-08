@@ -8,10 +8,28 @@ def isThreeOrFive(n):
   else:
     return False
 
+def getFactors(num):
+  """Returns a list of all factors of a given integer"""
+  factors = []
+  for f in range(1, num):
+    if num % f == 0:
+      factors.append(f)
+
+  return factors
+
 def isPrime(p):
   """Returns boolean (True/False) if the value given is prime."""
-
+  if p == 2:
+    return True
+  if isEven(p):
+    return False
+  
+  for div in range(3, p// 2, 2):
+    if p % div == 0:
+      return False
+    
   return True
+
 
 def isEven(n):
   """Returns boolean about given value being even."""
@@ -41,11 +59,33 @@ def fibonacciSequence(value):
 
   return nums
 
+def calcExponents(base, exp):
+  return base ** exp
+
+def numSquared(num):
+  return num ** 2
+
+def difference(a,b):
+  return a - b
+
+def listDigits(num):
+  num_str = str(num)
+  digits_list = [int(digit) for digit in str(num_str)]
+
+  return digits_list
+
 #Test your new functions in this main
 def main():
   knownPrimes = [3, 7, 11, 13, 17]
 
+  result = calcExponents(2,10)
+  print(result)
+
+
   num = int(input("Enter a number: "))
+
+  dlist = listDigits(num)
+  print(dlist)
 
   if isPrime(num):
     print("%d is a prime number" %(num))
