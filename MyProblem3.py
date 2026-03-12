@@ -6,7 +6,7 @@ from NumberTests import isPrime
 
 def main():
   list_primes = []
-  for i in range(2,2000000):
+  for i in range(2,200000):
         if isPrime(i):
             list_primes.append(i)
 
