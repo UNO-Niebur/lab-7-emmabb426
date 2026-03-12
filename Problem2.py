@@ -6,7 +6,7 @@ from NumberTests import fibonacciSequence
 
 def main():
   nums = fibonacciSequence(4000001)
-  print (nums)
+  #print (nums)
   total = 0
   for fib in nums:
     if isEven(fib):

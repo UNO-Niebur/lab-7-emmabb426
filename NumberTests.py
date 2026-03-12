@@ -23,6 +23,8 @@ def isPrime(p):
     return True
   if isEven(p):
     return False
+  if p <= 1:
+    return False
   
   for div in range(3, p// 2, 2):
     if p % div == 0:
